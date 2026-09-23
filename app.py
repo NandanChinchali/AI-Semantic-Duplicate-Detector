@@ -1,4 +1,3 @@
-# ============================================================
 # AI-POWERED SEMANTIC DUPLICATE DETECTOR
 # ============================================================
 
@@ -258,6 +257,8 @@ def clear_all():
         "",
         "",
         "",
+        0,
+        f"{FINAL_THRESHOLD * 100:.0f}%",
         "",
         None,
         None
@@ -358,6 +359,7 @@ footer {
 }
 
 """
+
 
 # ============================================================
 # GRADIO UI
@@ -570,6 +572,8 @@ with gr.Blocks(
             question_a,
             question_b,
             result_output,
+            similarity_output,
+            threshold_output,
             explanation_output,
             session_plot,
             download_button
@@ -578,12 +582,15 @@ with gr.Blocks(
 
 
 # ============================================================
-# LAUNCH
+# RENDER / PRODUCTION LAUNCH
 # ============================================================
 
 if __name__ == "__main__":
 
+    port = int(os.environ.get("PORT", 7860))
+
     demo.launch(
-        share=True,
+        server_name="0.0.0.0",
+        server_port=port,
         show_error=True
     )
