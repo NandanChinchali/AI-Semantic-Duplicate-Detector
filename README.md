@@ -16,6 +16,16 @@ The system converts questions into semantic vector representations using Sentenc
 - Session similarity visualization
 - Example question pairs for quick testing
 
+## Tech Stack
+
+- **Programming Language:** Python
+- **UI Framework:** Gradio
+- **NLP Model:** Sentence Transformers (`all-MiniLM-L6-v2`)
+- **Similarity Metric:** Cosine Similarity
+- **Machine Learning:** Scikit-learn
+- **Numerical Computing:** NumPy
+- **Visualization:** Matplotlib
+
 ## How It Works
 
 ```text
@@ -32,14 +42,4 @@ Cosine Similarity
 Validated Threshold
         ↓
 Duplicate / Non-Duplicate
-
-## 🛠️ Tech Stack
-
-- **Programming Language:** Python
-- **UI Framework:** Gradio
-- **NLP Model:** Sentence Transformers (`all-MiniLM-L6-v2`)
-- **Similarity Metric:** Cosine Similarity
-- **Machine Learning:** Scikit-learn
-- **Numerical Computing:** NumPy
-- **Visualization:** Matplotlib
 
